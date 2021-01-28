@@ -12,7 +12,8 @@ else
         echo "LDAP backup failed"
 fi
 
-BUCKET_NAME="ldap-backup-test1"
+BUCKET_NAME="dev-ldap-jenkins-backup"
+
 REGION="us-east-2"
 S3_BUCKET_NAME=$(aws s3 ls | grep $BUCKET_NAME|awk -F" " '{print $3}')
 
